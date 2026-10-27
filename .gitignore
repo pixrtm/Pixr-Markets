@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.cursor/
+.DS_Store
+.env
+.env.*
+*.log
+*.pem
+secret/
+secrets.php
+accounts.php
+accounts.lock
+pending_signups.json
+.openai/

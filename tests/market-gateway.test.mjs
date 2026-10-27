@@ -1,0 +1,21 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {buildUpstream} from '../src/market-gateway.js';
+const params = query => new URLSearchParams(query);
+test('The market gateway only builds allowlisted upstream URLs',()=>{
+ assert.match(buildUpstream(params('op=coinbase-product&product=BTC-USD')), /api\.coinbase\.com\/api\/v3\/brokerage\/market\/products\/BTC-USD$/);
+ assert.match(buildUpstream(params('op=yahoo&symbol=%5EGSPC&range=1y')), /query2\.finance\.yahoo\.com\/v8\/finance\/chart\/%5EGSPC/);
+ assert.match(buildUpstream(params('op=yahoo&symbol=NKE&range=5d')), /chart\/NKE\?/);
+ assert.match(buildUpstream(params('op=yahoo&symbol=7203.T&range=1y')), /chart\/7203\.T\?/);
+ assert.match(buildUpstream(params('op=search&q=nike')), /finance\/search\?q=nike&quotesCount=24/);
+ assert.match(buildUpstream(params('op=search&q='+encodeURIComponent("l'oréal"))), /q=l%27or%C3%A9al/i);
+ assert.equal(buildUpstream(params('op=yahoo&symbol=https://evil.test&range=1y')), null);
+ assert.equal(buildUpstream(params('op=yahoo&symbol=..&range=1y')), null);
+ assert.equal(buildUpstream(params('op=search&q=../admin')), null);
+ assert.equal(buildUpstream(params('op=coinbase-product&product=BTC-USD/../../admin')), null);
+ assert.equal(buildUpstream(params('op=coinbase-candles&product=ETH-USD&start=100&end=200')), null);
+ const start = 1_700_000_000;
+ const end = start + 300 * 86400;
+ assert.ok(buildUpstream(params(`op=coinbase-candles&product=ETH-USD&start=${start}&end=${end}`)));
+ assert.equal(buildUpstream(params(`op=coinbase-candles&product=ETH-USD&start=${start}&end=${start + 401 * 86400}`)), null);
+});

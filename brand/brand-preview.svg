@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 820" width="1200" height="820" role="img" aria-labelledby="title description">
+  <title id="title">Pixr Markets — identité visuelle</title>
+  <desc id="description">Logo géométrique vert et encre, variante blanche, monogramme et palette de trois couleurs.</desc>
+  <defs>
+    <g id="mark"><path d="M10 10h12v44H10z"/><path d="M27 10h15l10 10v10L42 40H27V28h13v-6H27z"/></g>
+    <g id="wordmark" font-family="Arial, Helvetica, sans-serif"><text x="77" y="54" font-size="57" font-weight="700" letter-spacing="-2.5">pixr</text><text x="80" y="75" font-size="11" font-weight="600" letter-spacing="4.5">MARKETS</text></g>
+  </defs>
+  <rect width="1200" height="820" fill="#F6F7F4"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#132522">
+    <text x="64" y="62" font-size="12" letter-spacing="3" font-weight="700">PIXR MARKETS</text>
+    <text x="64" y="108" font-size="30" font-weight="600">Une lecture claire des marchés.</text>
+    <text x="1136" y="62" text-anchor="end" font-size="11" fill="#63736D">IDENTITÉ VISUELLE · 01</text>
+  </g>
+  <rect x="64" y="148" width="520" height="286" fill="#FFFFFF"/>
+  <rect x="600" y="148" width="536" height="286" fill="#132522"/>
+  <g transform="translate(144 220) scale(1.6)"><use href="#mark" y="12" fill="#0A7862"/><use href="#wordmark" fill="#132522"/></g>
+  <g transform="translate(680 220) scale(1.6)"><use href="#mark" y="12" fill="#FFFFFF"/><use href="#wordmark" fill="#FFFFFF"/></g>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1.7" font-weight="600">
+    <text x="88" y="411" fill="#63736D">PRINCIPAL · FOND CLAIR</text>
+    <text x="624" y="411" fill="#AEC0B9">MONOCHROME · FOND SOMBRE</text>
+  </g>
+  <rect x="64" y="450" width="520" height="246" fill="#E9EEE8"/>
+  <use href="#mark" transform="translate(116 478) scale(2.5)" fill="#0A7862"/>
+  <rect x="370" y="520" width="64" height="64" rx="12" fill="#132522"/>
+  <use href="#mark" transform="translate(376 526) scale(.8125)" fill="#FFFFFF"/>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1.7" font-weight="600" fill="#63736D">
+    <text x="88" y="673">MONOGRAMME</text>
+    <text x="355" y="615" letter-spacing="0">ICÔNE DE NAVIGATION</text>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="600" y="450" width="168" height="162" fill="#132522"/>
+    <rect x="784" y="450" width="168" height="162" fill="#0A7862"/>
+    <rect x="968" y="450" width="168" height="162" fill="#F6F7F4" stroke="#D4DDD5"/>
+    <text x="600" y="641" fill="#132522" font-size="13" font-weight="600">Encre</text>
+    <text x="784" y="641" fill="#132522" font-size="13" font-weight="600">Vert marché</text>
+    <text x="968" y="641" fill="#132522" font-size="13" font-weight="600">Papier</text>
+    <text x="600" y="664" fill="#63736D" font-size="12">#132522</text>
+    <text x="784" y="664" fill="#63736D" font-size="12">#0A7862</text>
+    <text x="968" y="664" fill="#63736D" font-size="12">#F6F7F4</text>
+  </g>
+  <path d="M64 732H1136" stroke="#D4DDD5"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#63736D" font-size="12">
+    <text x="64" y="767">Précision. Lisibilité. Perspective.</text>
+    <text x="1136" y="767" text-anchor="end">SVG · SANS DÉGRADÉ · FONDS TRANSPARENTS</text>
+  </g>
+</svg>

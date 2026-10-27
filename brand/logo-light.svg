@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 252 88" width="252" height="88" role="img" aria-labelledby="title">
+  <title id="title">Pixr Markets</title>
+  <g fill="#FFFFFF" transform="translate(0 12)">
+    <path d="M10 10h12v44H10z"/>
+    <path d="M27 10h15l10 10v10L42 40H27V28h13v-6H27z"/>
+  </g>
+  <text x="77" y="54" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="57" font-weight="700" letter-spacing="-2.5">pixr</text>
+  <text x="80" y="75" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="600" letter-spacing="4.5">MARKETS</text>
+</svg>

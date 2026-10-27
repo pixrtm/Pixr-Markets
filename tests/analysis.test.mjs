@@ -1,0 +1,31 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {isGroundedAnswer, numbersIn} from '../src/analysis-guard.js';
+import {generate} from '../src/ai.js';
+const long = text => text.padEnd(90, ' ');
+test('Unverified numerical claims never pass the local analyst guard',()=>{
+ assert.equal(isGroundedAnswer(long('Il y a eu une baisse de 0.89% dans la semaine dernière.'), '', [1.2]), false);
+ assert.equal(isGroundedAnswer(long('Le rendement attendu est dix pour cent, soit 10 %.'), '', []), false);
+ assert.equal(isGroundedAnswer(long('Selon Frankfurter, les taux de change fluctuent et le contexte monétaire reste à examiner.'), '', []), true);
+ assert.equal(isGroundedAnswer(long('Le Nasdaq 100 est sensible à la concentration sectorielle et cette lecture reste incomplète.'), 'Nasdaq 100', []), true);
+ assert.equal(isGroundedAnswer(long('La performance observée est de 4,20 % et la baisse maximale atteint 11,50 %.'), '', [4.2, 11.5]), true);
+ assert.equal(isGroundedAnswer(long('La variation affichée serait de 4,24 %.'), '', [4.2]), false);
+ assert.deepEqual(numbersIn('1. Situation\nCours 80 457.35'), [80457.35]);
+ assert.deepEqual(numbersIn('2026-10-15 et variation -10 %'), [2026, 10, 15, -10]);
+});
+test('The ready analyst answers from the dossier without a model download',async()=>{
+ const context={actif:'Nike, Inc.',symbole:'NKE',devise:'USD',description:'Nike commercialise des articles de sport.',source:'Yahoo Finance',frequence:'Dernier cours publié',cours:{prix:36.85,date:'2026-10-15T08:00:00.000Z',variation_pourcent:4.39},historique:{performance_pourcent:-46.17,volatilite_annualisee_pourcent:36.29,baisse_maximale_pourcent:-51.39,plus_bas:33.87,plus_haut:69.68,observations:252,debut:'2025-10-15',fin:'2026-10-15',ecart_max_jours:4},limites:'Pas de résultats d’entreprise ni d’actualités.'};
+ const answer=await generate('Fais une analyse approfondie.',context,[],()=>{});
+ for(const title of ['Situation','Trajectoire','Risque passé','Lecture','Zones d’ombre','Scénarios','Limites']) assert.match(answer,new RegExp(title));
+ assert.equal(answer.includes('999'),false);
+ assert.equal(/Ouverture du dossier|Recherche des clôtures|Vérification des chiffres/.test(answer),false);
+ assert.equal(/T\d{2}:\d{2}/.test(answer),false);
+ assert.match(answer,/36,85/);
+ assert.match(answer,/\+4,39 %/);
+ assert.match(answer,/-46,17 %/);
+ assert.match(answer,/15 oct\. 2026/);
+ assert.equal(isGroundedAnswer(answer,context.actif,numbersIn(JSON.stringify(context))),true);
+ const refusal=await generate('Faut-il acheter maintenant ?',context,[],()=>{});
+ assert.match(refusal,/ne dit ni d’acheter ni de vendre/);
+ assert.equal(isGroundedAnswer(refusal,context.actif,numbersIn(JSON.stringify(context))),true);
+});

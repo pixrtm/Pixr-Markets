@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f5f6f3" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e1512" media="(prefers-color-scheme: dark)">
+<meta name="description" content="Pixr Markets — cours sourcés, indices, actions, crypto et analyste local. Uniquement sur pixr.dev/pixr-markets.">
+<meta name="keywords" content="pixr markets, pixr marchés, marchés bourse, crypto, actions, indices, pixr.dev/pixr-markets">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://pixr.dev/pixr-markets/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Pixr Markets">
+<meta property="og:url" content="https://pixr.dev/pixr-markets/">
+<meta property="og:title" content="Pixr Markets — Une lecture claire des marchés">
+<meta property="og:description" content="Cours sourcés et analyste local sur pixr.dev/pixr-markets.">
+<meta property="og:image" content="https://pixr.dev/pixr-markets/apple-touch-icon.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Pixr Markets — pixr.dev">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Pixr Markets","alternateName":["Pixr Markets","pixr markets"],"url":"https://pixr.dev/pixr-markets/","description":"Cours sourcés et analyste local pour lire les marchés.","applicationCategory":"FinanceApplication","operatingSystem":"Web","isPartOf":{"@type":"WebSite","name":"Pixr","url":"https://pixr.dev/"},"offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}}
+</script>
+<title>Pixr Markets — Une lecture claire des marchés | pixr.dev</title>
+<link rel="icon" type="image/png" href="/pixr-markets/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/pixr-markets/favicon.svg" />
+<link rel="shortcut icon" href="/pixr-markets/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/pixr-markets/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-title" content="Pixr Markets" />
+<link rel="manifest" href="/pixr-markets/site.webmanifest" />
+  <script type="module" crossorigin src="./assets/index-DEkne1op.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-DpalfpF6.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Aller aux marchés</a>
+<header class="header"><a class="brand" href="./" aria-label="Pixr Markets, accueil"><picture><source srcset="./brand/logo-pixr-on-dark.png" media="(prefers-color-scheme: dark)"><img src="./brand/logo-pixr.png" width="838" height="292" alt="Pixr Markets"></picture></a><nav aria-label="Navigation principale"><button class="nav-link active" data-page="overview">Vue d’ensemble</button><button class="nav-link" data-page="selection">Ma sélection <span id="favorites-count">0</span></button><button class="nav-link" data-page="analyst">Analyste</button></nav><div class="header-right"><span class="local-badge" id="space-badge"><i></i> <span id="space-label">Espace personnel</span></span><button type="button" class="account-chip" id="account-open">Connexion</button><button class="icon-button" id="sources-open" aria-label="Sources des données et confidentialité" title="Sources des données">ⓘ</button></div></header>
+<main id="main" data-page="overview">
+<div class="page-heading"><div><div class="eyebrow" id="page-kicker">LE MONDE DES MARCHÉS, À PORTÉE DE VUE</div><h1 id="page-title">Une lecture claire des marchés.</h1><p id="page-lead">Des cours sourcés. Un analyste pour les examiner en profondeur.</p></div><div class="page-date"><span id="today"></span><button class="text-button" id="refresh"><span aria-hidden="true">↻</span> Actualiser les cours</button></div></div>
+<section class="pulse" id="pulse" aria-label="Aperçu des cours"><div class="pulse-loading">Connexion aux sources de marché…</div></section>
+<section class="selection-board" id="selection-board">
+<div class="selection-intro"><h2>Côte à côte</h2><p>Chaque carte est un actif marqué d’une étoile. Le cours vient de la même source que sur la vue d’ensemble. Le graphique en dessous suit la carte ouverte.</p></div>
+<div id="selection-cards" class="selection-cards"></div>
+</section>
+<div class="workspace" id="workspace">
+<aside class="market-list panel" id="pane-explorer"><button type="button" class="pane-rail" data-collapse="explorer">Explorer</button><div class="list-title"><h2>Explorer</h2><span class="count" id="asset-count">18 actifs</span><button type="button" class="pane-collapse" data-collapse="explorer" aria-label="Réduire l’explorateur" title="Réduire l’explorateur">⟨</button></div><label class="search-box"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Nike, Toyota, LVMH, Bitcoin…" aria-label="Rechercher une marque ou un symbole"></label><div class="filter-row" aria-label="Type d’actif"><button class="selected" data-kind="all">Tous</button><button data-kind="index">Indices</button><button data-kind="stock">Actions</button><button data-kind="crypto">Crypto</button><button data-kind="fx">Devises</button></div><div id="asset-list" class="asset-items"></div><div class="list-foot"><span class="dot"></span> Toutes les cotations · Yahoo Finance</div></aside>
+<div class="splitter split-explorer" id="split-explorer" data-split="explorer" role="separator" aria-orientation="vertical" aria-label="Largeur de l’explorateur" title="Glisser pour élargir. Double-clic : largeur d’origine." tabindex="0"></div>
+<div class="center-column" id="pane-center"><section class="panel market-detail"><div class="detail-heading"><div class="instrument-heading"><div class="asset-avatar large" id="detail-icon"></div><div><div class="instrument-meta" id="detail-meta"></div><h2 id="detail-name"></h2></div></div><button id="favorite" class="icon-button favorite-button" aria-label="Ajouter cet actif à ma sélection" aria-pressed="false">☆</button></div><div class="price-row"><div><div class="price" id="detail-price">—</div><div id="detail-change" class="change muted">Connexion à la source…</div></div><div class="quote-meta"><span id="source-tag" class="source-tag"></span><div id="quote-time"></div></div></div><div class="chart-toolbar"><span id="chart-label">Historique des clôtures</span><div class="periods" aria-label="Période de l’historique"><button data-period="1M">1M</button><button data-period="6M">6M</button><button data-period="1Y" class="selected">1A</button><button data-period="5Y">5A</button></div></div><div class="chart-area" id="chart-area"><div class="chart-status" id="chart-status" role="status">Chargement de l’historique…</div><div id="line-chart"></div><div id="tv-chart" hidden></div></div><div class="data-note" id="chart-note"></div><div class="metrics" id="metrics"></div><div class="detail-actions"><button class="text-button" id="download-csv">↓ Exporter les données</button><button class="text-button" id="import-open">+ Ajouter un historique CSV</button><input id="csv-file" type="file" accept=".csv,text/csv" hidden><span id="import-state"></span></div></section>
+<div class="splitter splitter-row split-chart" id="split-chart" data-split="chart" role="separator" aria-orientation="horizontal" aria-label="Hauteur du graphique" title="Glisser pour hausser le graphique. Double-clic : hauteur d’origine." tabindex="0"></div>
+<section class="panel reading"><div class="section-heading"><div><div class="eyebrow">PRENDRE DU RECUL</div><h2>Ce que les données racontent</h2></div><span class="small-tag">Calculé, sans IA</span></div><div id="reading"></div><div class="reading-foot"><span>Les performances passées ne préjugent pas des performances futures.</span><button class="text-button" id="explain-metrics">Voir la méthode ↗</button></div></section>
+</div>
+<div class="splitter split-analyst" id="split-analyst" data-split="analyst" role="separator" aria-orientation="vertical" aria-label="Largeur de l’analyste" title="Glisser pour élargir. Double-clic : largeur d’origine." tabindex="0"></div>
+<aside class="panel analyst" id="analyst"><button type="button" class="pane-rail" data-collapse="analyst">Analyste</button><div class="analyst-heading"><span class="analyst-monogram"><img src="./brand/logo-mark.svg" width="30" height="30" alt=""></span><div><h2>Pixr Analyst</h2><p>Analyse approfondie de l’actif choisi.</p></div><button type="button" class="pane-collapse" data-collapse="analyst" aria-label="Réduire l’analyste" title="Réduire l’analyste">⟩</button><span id="ai-led" class="status-led ready" title="IA prête"></span></div><div class="analyst-context"><span>À propos de</span><strong id="ai-context"></strong><span class="lock-label">⌑ Privé</span></div><div class="ai-dossier" id="ai-dossier"></div><div class="quick-actions"><button data-ask="analyse">Analyse approfondie <span>↗</span></button><button data-ask="risks">Les risques <span>△</span></button><button data-ask="scenarios">Scénarios <span>⌁</span></button><button data-ask="blind">Zones d’ombre <span>?</span></button><button data-ask="summary">Résumer <span>≡</span></button></div><div class="messages" id="messages" role="log" aria-live="polite"><div class="welcome-message"><span class="message-label">PIXR ANALYST</span><p>Sélectionnez un actif, puis lancez l’analyse approfondie.</p><p class="muted">L’IA s’appuie sur les données disponibles et peut se tromper.</p></div></div><form id="chat-form"><label class="sr-only" for="question">Question à l’analyste</label><textarea id="question" rows="3" maxlength="1200" placeholder="Que faut-il examiner en profondeur avant d’aller plus loin ?"></textarea><div class="composer-foot"><span id="ai-model-status">Prête · sans téléchargement</span><button id="send" aria-label="Envoyer la question" type="submit">↑</button><button type="button" id="stop-ai" hidden>Arrêter</button></div></form><div class="analyst-foot"><span>Lecture assistée. Les chiffres du dossier font foi, pas le texte généré.</span><button type="button" id="copy-dossier">Copier le dossier</button><button id="clear-chat" title="Effacer la conversation" aria-label="Effacer la conversation">Effacer</button></div></aside>
+</div>
+<section class="world-section"><div class="world-heading"><div><div class="eyebrow">AU-DELÀ D’UN SEUL MARCHÉ</div><h2>Les places mondiales.</h2></div><p>Aperçu de quelques places. Pour toute société cotée, utilisez la recherche.</p></div><div class="panel world-widget" id="world-widget"></div></section>
+<footer><div class="footer-brand">pixr <span>MARKETS</span></div><p>Comprendre avant de décider.</p><a class="text-button" href="https://github.com/pixrtm/Pixr-Markets/" target="_blank" rel="noopener">Code source</a><a class="text-button" href="https://github.com/pixrtm/Pixr-Markets/blob/main/LICENSE" target="_blank" rel="noopener">Licence MIT</a><button class="text-button" id="footer-sources">Sources & confidentialité ↗</button></footer>
+</main>
+<div id="toast" role="status" class="toast" hidden></div>
+<dialog id="disclaimer-dialog" aria-labelledby="disclaimer-title">
+<div class="eyebrow">AVANT LA PREMIÈRE LECTURE</div>
+<h2 id="disclaimer-title">L’IA n’est pas parfaite.</h2>
+<p>Pixr Analyst peut se tromper. Elle peut mal lire une situation, exagérer un risque, oublier une information importante ou écrire une idée fausse avec beaucoup d’assurance.</p>
+<p>Ce n’est pas un conseil en investissement, ni une prévision. Les cours et les calculs affichés viennent des sources indiquées. En cas de différence, ce sont ces chiffres qui font foi, pas le texte généré.</p>
+<p>L’analyste est déjà prêt dans votre navigateur. Il ne se télécharge pas. Vos questions ne sont pas envoyées à un service d’IA, mais cela ne le rend pas infaillible.</p>
+<button id="disclaimer-ok" class="primary" type="button">J’ai compris</button>
+</dialog>
+<dialog id="info-dialog"><button class="dialog-close icon-button" id="dialog-close" aria-label="Fermer">×</button><div id="dialog-content"></div></dialog>
+<dialog id="account-dialog" aria-label="Compte Pixr">
+<button class="dialog-close icon-button" id="account-close" type="button" aria-label="Fermer">×</button>
+<div id="account-in" hidden>
+<div class="eyebrow">COMPTE PIXR</div>
+<h2>Compte connecté</h2>
+<p id="account-who"></p>
+<p class="dialog-note">La sélection et les marques retrouvées sont enregistrées pour ce compte, dans le dossier protégé. Les questions de l’analyste et les CSV restent sur cet appareil.</p>
+<button id="account-logout" class="primary" type="button">Se déconnecter</button>
+</div>
+<form id="account-form" class="account-form">
+<div class="eyebrow">COMPTE PIXR</div>
+<h2>Connexion</h2>
+<p>Le même compte que sur pixr.dev. La sélection suit le compte.</p>
+<p id="account-error" class="form-error" hidden></p>
+<label>Adresse email<input id="account-email" type="email" autocomplete="username" required maxlength="120"></label>
+<label id="account-password-label">Mot de passe<input id="account-password" type="password" autocomplete="current-password" required maxlength="128"></label>
+<label id="account-confirm-label" hidden>Confirmer le mot de passe<input id="account-confirm" type="password" autocomplete="new-password" maxlength="128"></label>
+<label id="account-code-label" hidden>Code reçu par email<input id="account-code" inputmode="numeric" autocomplete="one-time-code" maxlength="8"></label>
+<div class="sr-only" aria-hidden="true"><input id="account-website" type="text" tabindex="-1" autocomplete="off"></div>
+<button class="primary" id="account-submit" type="submit">Se connecter</button>
+<div class="account-links"><button type="button" class="text-button" id="account-google" hidden>Continuer avec Google</button><button type="button" class="text-button" id="account-switch">Créer un compte</button></div>
+</form>
+</dialog>
+</body>
+</html>

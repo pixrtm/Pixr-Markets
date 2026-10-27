@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-labelledby="title">
+  <title id="title">Pixr Markets</title>
+  <rect width="64" height="64" rx="12" fill="#132522"/>
+  <g fill="#FFFFFF" transform="translate(6 6) scale(.8125)">
+    <path d="M10 10h12v44H10z"/>
+    <path d="M27 10h15l10 10v10L42 40H27V28h13v-6H27z"/>
+  </g>
+</svg>

@@ -1,0 +1,20 @@
+# Pixr Markets — https://pixr.dev/pixr-markets/
+
+User-agent: *
+Allow: /pixr-markets/
+Allow: /pixr-markets/sitemap.xml
+Allow: /pixr-markets/brand/
+Allow: /pixr-markets/assets/
+Allow: /pixr-markets/site.webmanifest
+
+Disallow: /pixr-markets/dist/
+Disallow: /pixr-markets/src/
+Disallow: /pixr-markets/tests/
+Disallow: /pixr-markets/node_modules/
+Disallow: /pixr-markets/index.dev.html
+Disallow: /pixr-markets/compte.php
+Disallow: /pixr-markets/marche.php
+
+# Priorité haute pour Google
+Sitemap: https://pixr.dev/pixr-markets/sitemap.xml
+Sitemap: https://pixr.dev/sitemap.xml

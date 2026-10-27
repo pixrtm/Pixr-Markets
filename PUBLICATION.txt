@@ -1,0 +1,9 @@
+Le code public est https://github.com/pixrtm/Pixr-Markets/ (licence MIT, copyright 2026 pixr44).
+Ce dépôt ne contient ni clé, ni mot de passe, ni base de comptes.
+Le dossier à envoyer sur pixr.dev est celui-ci : www/pixr-markets.
+Pas de copie sur le Bureau.
+À la racine, le site prêt contient index.html, assets/, brand/ et marche.php.
+npm run build reconstruit le site et recopie ces fichiers à cette racine.
+marche.php doit être exécuté par PHP : c’est lui qui récupère Coinbase et Yahoo Finance.
+index.dev.html, src/, tests/ et node_modules/ servent au travail local. Le site en ligne utilise index.html.
+Les liens d’icône pointent vers /pixr-markets/ à côté de index.html.
